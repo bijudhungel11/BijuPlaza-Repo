@@ -1,0 +1,4 @@
+{
+  "presets": [["@babel/preset-env"]]
+}
+/* having these setting we can run project from the terminal and we can run es6 code */

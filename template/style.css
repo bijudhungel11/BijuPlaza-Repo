@@ -1,0 +1,174 @@
+html {
+  font-size: 62.5%; /* // 10px */
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 1.6rem Helvetica;
+  margin: 0;
+  height: 100vh;
+}
+.grid__container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer"; /* donot write the , Comma  */
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+.header {
+  grid-area: header;
+  background-color: #203040;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+.header__brand a {
+  color: #fff;
+  text-decoration: none;
+  font-style: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.header__links a {
+  color: #fff;
+  text-decoration: none;
+  font-style: none;
+
+  font-size: 2.5rem;
+  margin: 3px;
+  transition: all 0.6s;
+}
+.header__links a:hover {
+  color: coral;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: coral;
+}
+/* homescreen for the product */
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products li {
+  padding: 0;
+  list-style-type: none;
+  flex: 0 1 34rem; /* flex-grow: 0; flex-shrink: 1; width 34rem */
+  margin: 1rem;
+  height: 50rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* to strecth at the end of the screen */
+  height: 100%;
+}
+.product__image {
+  max-width: 34rem;
+  max-height: 34rem;
+}
+.product__name a {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.product__brand {
+  font-size: 1.3rem;
+  color: #808080;
+}
+.product__price {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.product__rating {
+  margin-bottom: 1rem;
+}
+
+/* sidebar sections start here */
+
+.header__burger {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-close {
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  font-size: 2.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 3rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.8rem;
+  transition: all 0.7s;
+}
+.btn-close:hover {
+  color: black;
+}
+.header__burger:hover {
+  color: coral;
+}
+.sidebar {
+  position: fixed;
+  /* by using the stylesheet we are making the sidebar at the left of the body  which means out of the screen */
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: #f0f0f0;
+  height: 100%;
+  align-items: center;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+.sidebar__header {
+  height: 5rem;
+  padding: 2rem;
+  padding-top: 2rem;
+  align-items: center;
+  color: white;
+
+  background-color: #203040;
+}
+.sidebar__list {
+  padding: 3rem;
+  list-style-type: none;
+}
+.sidebar__list--item {
+  padding: 0.8rem;
+}
+.sidebar__list--link {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}

@@ -1,0 +1,330 @@
+html {
+  font-size: 62.5%; /* // 10px */
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 1.6rem Helvetica;
+  margin: 0;
+  height: 100vh;
+}
+
+/* to remove the scrool bar */
+.main-container {
+  position: relative;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.541);
+  z-index: 10;
+  overflow: hidden;
+  transition: all 5s ease-in-out;
+}
+.active {
+  display: block;
+  opacity: 1;
+
+  cursor: pointer;
+  transition: all 5s;
+}
+
+#root {
+  height: 100%;
+}
+body::-webkit-scrollbar {
+  display: block;
+  width: 1.5rem;
+  background-image: linear-gradient(to bottom, #00f260, #0575e6);
+}
+body::-webkit-scrollbar-thumb {
+  background: #5614b0; /* #dbd65c */
+  border-radius: 4rem;
+}
+
+.grid__container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer"; /* donot write the , Comma  */
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+}
+.header {
+  grid-area: header;
+  background-image: linear-gradient(to bottom right, #a8ff78, #45b649);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  position: fixed;
+
+  width: 100%;
+  z-index: 9;
+}
+.header__brand a {
+  color: black;
+  text-decoration: none;
+  font-style: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.header__links a {
+  color: black;
+  text-decoration: none;
+  font-style: none;
+  padding: 0.4rem;
+  font-size: 2.5rem;
+  margin-right: 1.3rem;
+  transition: all 0.6s;
+}
+.header__links a:hover {
+  color: white;
+}
+
+/* to make the header and the footer fix  */
+
+/* .main {
+  overflow: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+} */
+.main {
+  grid-area: main;
+
+  background-image: linear-gradient(to right bottom, #eef2f3);
+}
+.footer {
+  grid-area: footer;
+  background-image: linear-gradient(to bottom right, #a8ff78, #45b649);
+  color: black;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+}
+/* homescreen for the product */
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.products li {
+  padding: 0;
+  list-style-type: none;
+  flex: 0 1 34rem; /* flex-grow: 0; flex-shrink: 1; width 34rem */
+  margin: 1rem;
+  height: 50rem;
+  border-bottom: 0.1rem #c0c0c0 solid;
+  transition: all 0.2s;
+  backface-visibility: hidden;
+}
+.products li:hover {
+  transform: scale(1.01);
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* to strecth at the end of the screen */
+  height: 100%;
+}
+
+.product__image {
+  max-width: 34rem;
+  max-height: 34rem;
+}
+.product__name a {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.product__brand {
+  font-size: 1.3rem;
+  color: #808080;
+}
+.product__price {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.product__rating {
+  margin-bottom: 1rem;
+}
+
+/* sidebar sections start here */
+
+.header__burger {
+  font-size: 3rem;
+  padding: 0.5rem;
+  background: none;
+  border: 0.1rem solid white;
+  color: black;
+  margin: 0rem 1rem;
+
+  outline: none;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.btn-close {
+  background-color: red;
+  color: white;
+  font-weight: 700;
+  font-size: 2.4rem;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 3rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  position: absolute;
+  right: 0.2rem;
+  top: 0.8rem;
+  transition: all 0.7s;
+  outline: none;
+}
+.btn-close:hover {
+  color: black;
+}
+.header__burger:hover {
+  color: white;
+}
+.sidebar {
+  position: fixed;
+  transition: transform 0.8s;
+  /* to make the transition after the sidebar opens or close  */
+
+  /* by using the stylesheet we are making the sidebar at the left of the body  which means out of the screen */
+  transform: translateX(-30rem);
+  width: 30rem;
+  background-color: #f0f0f0;
+  height: 100%;
+  align-items: center;
+  z-index: 11;
+  overflow: hidden;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar__header {
+  height: 5rem;
+  padding: 2rem;
+  padding-top: 2rem;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(to bottom right, #a8ff78, #45b649);
+}
+
+.sidebar__list {
+  padding: 3rem;
+  list-style-type: none;
+  overflow-y: scroll;
+  height: 67vh;
+}
+.sidebar__list::-webkit-scrollbar {
+  display: block;
+  width: 1.5rem;
+  background-image: linear-gradient(to bottom, #00f260, #0575e6);
+}
+.sidebar__list::-webkit-scrollbar-thumb {
+  background: #5614b0; /* #dbd65c */
+  border-radius: 4rem;
+}
+.sidebar__list li {
+  background-color: transparent;
+  margin-bottom: 1rem;
+
+  width: 100%;
+  transition: all 0.4s;
+}
+.sidebar__list li:hover {
+  background-color: rgba(255, 192, 203, 0.349);
+}
+.sidebar__list--item {
+  padding: 0.8rem;
+}
+.sidebar__list--link {
+  font-size: 2rem;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+.sidebar__list--link:hover {
+  color: brown;
+}
+.sidebar__footer {
+  background-image: linear-gradient(to bottom right, #a8ff78, #45b649);
+  padding: 4rem 0.4rem;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  position: fixed;
+
+  height: 0.1rem;
+}
+
+/* product screens  */
+/* .product__screen--topic {
+  position: fixed;
+  margin: 0 auto;
+}
+ */
+
+.scroll__to--top {
+  position: fixed;
+
+  bottom: 5rem;
+  right: 2rem;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.308);
+  border: 1px solid rgba(0, 0, 0, 0.335);
+  height: 5rem;
+  border-radius: 50%;
+  font-size: 5rem;
+  font-weight: bolder;
+  outline: none;
+  transition: all 0.5s;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0.8rem);
+    transition: linear 0.4s;
+  }
+  to {
+    transform: translateY(0.4rem);
+  }
+}
+.scroll__to--top:hover {
+  cursor: pointer;
+  color: #24fe41;
+  background-color: #fff;
+}
+.scroll__to--top h2 {
+  margin: -0.5rem auto;
+}

@@ -1,0 +1,145 @@
+.checkout__steps {
+  margin-top: 4rem;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin-top: 2rem;
+}
+.form__container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 0.1rem solid #c0c0c0;
+  border-radius: 0.5rem;
+}
+.form__container--radio {
+  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
+}
+.form__container--input-1 {
+  display: flex;
+  align-items: center;
+}
+.form__container--input-2 {
+  display: flex;
+  align-items: center;
+}
+.esewa--logo {
+  margin-left: 1rem;
+  object-fit: contain;
+}
+.khalti--logo {
+  height: 10rem;
+  object-fit: contain;
+}
+.test__me {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #c0f0cc;
+  width: 50vw;
+}
+.form__container li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.form__container li .error__message {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #d9534f;
+}
+input {
+  padding: 1rem;
+  border: 0.1rem solid #c0c0c0;
+  border-radius: 0.5rem;
+}
+
+.button__success {
+  background-color: #5cb85c;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  color: white;
+  font-size: 1.7rem;
+  outline: none;
+  transition: 0.3s all linear;
+}
+.button__danger {
+  background-color: #d9534f;
+  padding: 0.5rem;
+  border-radius: 5rem;
+  color: white;
+  font-size: 1.7rem;
+  outline: none;
+  transition: 0.3s all linear;
+}
+.button__danger.color-black {
+  background-color: #d9534f;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.7rem;
+  outline: none;
+  transition: 0.3s all linear;
+}
+.button__warning.color-black {
+  background-color: #f0ad4e;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.7rem;
+  outline: none;
+  transition: 0.3s all linear;
+}
+.button__warning.color-black:hover,
+.button__danger.color-black:hover,
+.button__danger:hover,
+.button__success:hover {
+  color: black;
+}
+.button.secondary {
+  background-color: coral;
+}
+.text-center {
+  text-align: center;
+}
+.last__child {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+}
+.last__child a {
+  font-size: large;
+  font-weight: bolder;
+  background-color: coral;
+  color: white;
+  padding: 0.5rem;
+}
+.inline-block {
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+.payment__screen--container {
+  margin-top: 3rem;
+}
+
+/* profile screen */
+
+.form__container--logo {
+  color: #59e40e;
+  text-align: center;
+  font-size: 4rem;
+}
+.form__container--heading {
+  text-align: center;
+}

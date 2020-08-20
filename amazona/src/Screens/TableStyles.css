@@ -1,0 +1,43 @@
+/* add to item styles sheetes  */
+.product__header {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  align-items: flex-start;
+}
+.content__margined {
+  margin: 1rem;
+}
+.mr-2 {
+  margin-right: 1rem;
+}
+.margin-buttom {
+  margin: 2rem 0rem;
+}
+.table {
+  width: 80%;
+  margin: 0 auto;
+}
+.table .text-center {
+  text-align: center;
+}
+.table th {
+  text-align: center;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: lightgray;
+}
+tbody > tr:nth-child(odd):hover {
+  background-color: rgb(146, 199, 200);
+}
+tbody > tr:nth-child(even):hover {
+  background-color: pink;
+}
+td {
+  text-align: center;
+}
+.flex-button {
+  display: flex;
+  justify-content: space-around;
+}

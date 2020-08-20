@@ -1,0 +1,87 @@
+.product__details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem;
+}
+.product__header {
+  margin-top: 3rem;
+}
+.product__details--img {
+  flex: 2 1 50rem;
+  width: 100%;
+
+  /* 2 out of 4
+     1 for shrink
+     60rem height */
+}
+.product__details--img img {
+  transition: all 0.4s;
+  width: 45rem;
+}
+
+.product__details--info {
+  flex: 1 1 30rem;
+  /* 2 out of 4
+     1 for shrink
+     30rem height */
+}
+.product__details--action {
+  flex: 1 1 30rem;
+  /* 2 out of 4
+     1 for shrink
+     30rem height */
+}
+
+.product__details--info ul,
+.product__details--action ul {
+  list-style: none;
+  padding: 0;
+}
+.product__details--info li,
+.product__details--action li {
+  margin: 1.4rem;
+}
+.back-to-home {
+  padding: 1rem;
+}
+.product__details--action {
+  border: 0.2rem #808080;
+  border-radius: 0.6rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+}
+.product__details--action ul li:last-child {
+  display: flex;
+  flex-direction: column;
+}
+.button {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  background-color: coral;
+  padding: 1.3rem;
+  border: 0.1rem #808080 solid;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.button.btn__success {
+  background-color: #5cb85c;
+}
+.button:hover {
+  border: 0.1rem #818185 solid;
+
+  color: black;
+  background-color: rgba(235, 88, 34, 0.733);
+}
+.text-captalize {
+  text-transform: uppercase;
+}
+.product__rating-reviews {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7rem;
+  font-weight: 800;
+}

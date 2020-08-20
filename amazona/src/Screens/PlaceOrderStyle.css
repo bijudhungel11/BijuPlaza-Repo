@@ -1,0 +1,45 @@
+/* place order css */
+
+.placeorder {
+  display: flex;
+  flex-grow: wrap;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.placeorder__info {
+  flex: 3 1 60rem;
+}
+.placeorder__action {
+  flex: 1 1 20rem;
+  border: 0.1rem solid #c0c0c0;
+  border-radius: 0.5rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+}
+.placeorder__info > div {
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.4rem;
+  background-color: #fcfcfc;
+  padding: 1rem;
+  margin: 1rem;
+}
+.placeorder__info > div:first-child {
+  margin-top: 0;
+}
+
+.placeorder__action > ul {
+  padding: 0;
+  list-style-type: none;
+}
+.placeorder__action > ul > li {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.placeorder__action > ul > li:last-child {
+  margin-top: 3rem;
+  border-top: 0.5rem solid #c0c0c0;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #c04000;
+}
