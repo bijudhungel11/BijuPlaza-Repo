@@ -16,8 +16,8 @@ function Shirt(props) {
   }, [dispatch]);
   let checkArr = [];
   let checkValue = "";
-  let valueArr = [];
-  products.map((product, i) => {
+
+  products.filter((product, i) => {
     checkValue = products.find((value) => value.image === `/images/d${i}.jpg`);
 
     if (checkValue) {

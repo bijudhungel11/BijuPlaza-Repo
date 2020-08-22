@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./ProductScreen.css";
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import "./SignInScreen.css";
 import { savePayment } from "../actions/cartAction";
 import CheckoutWizard from "../components/CheckoutWizard";
@@ -9,7 +8,7 @@ import { MdPayment } from "react-icons/md";
 function PaymentScreen(props) {
   const dispatch = useDispatch();
 
-  const stateValue = useSelector((state) => console.log(state.cart));
+  // const stateValue = useSelector((state) => console.log(state.cart));
 
   const [paymentMethod, setPaymentMethod] = useState("");
 

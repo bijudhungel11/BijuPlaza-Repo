@@ -68,8 +68,7 @@ function Sidebar(props) {
 
           <li className="sidebar__list--item">
             <Link to="/shipping" className="sidebar__list--link">
-              <FaShippingFast />
-              Shipping
+              <FaShippingFast /> Shipping
             </Link>
           </li>
         </ul>

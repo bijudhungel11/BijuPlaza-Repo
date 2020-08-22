@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ function CommonScreen(props) {
   return (
     <>
       <div className="product__screen--topic">
-        <h1>{topic}</h1>
+        <h1 className="product__screen--topicHeading">{topic}</h1>
       </div>
       <ul className="products">
         {checkArr.map((product, index) => (

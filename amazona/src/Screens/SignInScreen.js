@@ -23,7 +23,7 @@ function SignInScreen(props) {
       //console.log(userInfo.isAdmin);
       props.history.push(redirect);
     }
-  }, [userInfo, props.history]);
+  }, [userInfo, redirect, props.history]);
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(signIn(email, password));

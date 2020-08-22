@@ -11,7 +11,7 @@ function Header(props) {
         <button className="header__burger" onClick={openMenu}>
           &#9776;
         </button>
-        <Link to="/">
+        <Link to="/" className="header__biju--brand">
           <span className="biju__brand">B</span>
           ijuPlaza
         </Link>

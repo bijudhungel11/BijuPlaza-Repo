@@ -15,7 +15,6 @@ function MainContent(props) {
     ProductScreen,
     HomeScreen,
     CartScreen,
-    closeOverlay,
   } = props;
   return (
     <>

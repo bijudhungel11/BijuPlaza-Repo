@@ -18,11 +18,7 @@ function AddItemScreen(props) {
 
   const productDelete = useSelector((state) => state.productDelete);
   //console.log(productDelete);
-  const {
-    loading: loadingDelete,
-    success: successDelete,
-    error: errorDelete,
-  } = productDelete;
+  const { success: successDelete } = productDelete;
 
   //console.log(productSave);
   const productList = useSelector((state) => state.productList);
@@ -37,7 +33,7 @@ function AddItemScreen(props) {
   const [category, setCategory] = useState();
   const [description, setDescription] = useState();
   const [rating, setRating] = useState();
-  const [numReviews, setNumReviews] = useState();
+  //const [numReviews, setNumReviews] = useState();
 
   const submitHandler = (e) => {
     e.preventDefault();

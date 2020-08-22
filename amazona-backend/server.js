@@ -1,5 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
+/* to deploy */
+import path from "path";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import config from "./config.js";
@@ -48,8 +50,15 @@ app.get("/api/products", (req, res) => {
 });
 
 }); */
-
-app.listen(5000, () => {
+/* step 3 */
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("amazona/build"));
+  app.use(express.static(path.join(__dirname, "/../amazona/build")));
+  app.use("*", (req, res) => {
+    res.sendFile(path.join(`${__dirname}/../amazona/build/index.html`));
+  });
+}
+app.listen(config.PORT, () => {
   console.log("Server started at http://localhost:5000");
 });
 /* this is the function which will make the express to run the program in the server

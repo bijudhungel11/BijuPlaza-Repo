@@ -38,7 +38,7 @@ body {
 }
 
 #root {
-  height: 100%;
+  height: 100vh;
 }
 body::-webkit-scrollbar {
   display: block;
@@ -69,6 +69,10 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   z-index: 9;
 }
+.header__brand {
+  display: flex;
+  align-items: center;
+}
 .header__brand a {
   color: black;
   text-decoration: none;
@@ -91,6 +95,10 @@ body::-webkit-scrollbar-thumb {
   color: white;
 }
 
+.header__biju--brand {
+  letter-spacing: 1.5px;
+}
+
 /* to make the header and the footer fix  */
 
 /* .main {
@@ -102,7 +110,7 @@ body::-webkit-scrollbar-thumb {
 } */
 .main {
   grid-area: main;
-
+  height: 100%;
   background-image: linear-gradient(to right bottom, #eef2f3);
 }
 .footer {
@@ -113,8 +121,9 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   bottom: 0;
+  position: fixed;
+
   width: 100%;
   height: 4rem;
 }
@@ -267,11 +276,13 @@ a:hover {
 }
 .sidebar__list--item {
   padding: 0.8rem;
+  border-bottom: 0.5px solid black;
 }
 .sidebar__list--link {
   font-size: 2rem;
   font-weight: bold;
   transition: all 0.4s;
+  color: #257c28;
 }
 .sidebar__list--link:hover {
   color: brown;
@@ -283,7 +294,6 @@ a:hover {
   bottom: 0;
   width: 100%;
   position: fixed;
-
   height: 0.1rem;
 }
 
@@ -327,4 +337,9 @@ a:hover {
 }
 .scroll__to--top h2 {
   margin: -0.5rem auto;
+}
+/* commonscreen styles sheetse */
+
+.product__screen--topicHeading {
+  margin-top: 2rem;
 }
