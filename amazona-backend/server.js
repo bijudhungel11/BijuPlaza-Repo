@@ -53,10 +53,10 @@ app.get("/api/products", (req, res) => {
 /* step 3 */
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("amazona/build"));
-  app.use(express.static(path.join(`${__dirname}/../amazona/build`)));
+  /*  app.use(express.static(path.join(`${__dirname}/../amazona/build`)));
   app.get("*", (req, res) => {
     res.sendFile(path.join(`${__dirname}/../amazona/build/index.html`));
-  });
+  }); */
 }
 app.listen(config.PORT, () => {
   console.log("Server started at http://localhost:5000");
