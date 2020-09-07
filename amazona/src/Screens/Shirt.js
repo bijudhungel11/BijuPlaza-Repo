@@ -25,7 +25,7 @@ function Shirt(props) {
     }
   });
 
-  console.log(checkArr);
+  /*  console.log(checkArr); */
   return loading ? (
     <div>Loading...</div>
   ) : error ? (

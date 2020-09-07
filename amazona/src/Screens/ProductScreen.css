@@ -45,6 +45,17 @@
 }
 .back-to-home {
   padding: 1rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+.back-to-home a:hover {
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+.back-to-home a {
+  color: black !important;
+  font-weight: bold;
+  padding: 1rem;
 }
 .product__details--action {
   border: 0.2rem #808080;
@@ -85,3 +96,5 @@
   font-size: 1.7rem;
   font-weight: 800;
 }
+
+/* product screen  */

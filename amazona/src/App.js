@@ -51,7 +51,7 @@ function App(props) {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="app">
         <div className="grid__container ">
           <div className="header">
             <Header openMenu={openMenu} userInfo={userInfo} />

@@ -28,7 +28,7 @@ const isAuth = (req, res, next) => {
       if (err) {
         return res.status(401).send({ msg: "Invalid Token" });
       }
-      console.log("decode where the user is req.user", decode);
+      /*  console.log("decode where the user is req.user", decode); */
       req.user = decode;
       next();
     });
@@ -44,7 +44,7 @@ const isAdmin = (req, res, next) => {
   //console.log(user); */
   if (token) {
     const onlyToken = token.slice(6, token.length);
-    console.log("onlyToken", onlyToken);
+    /*  console.log("onlyToken", onlyToken); */
     jwt.verify(onlyToken, config.JWT_SECRET, (err, decode) => {
       return (req.user = decode);
     });

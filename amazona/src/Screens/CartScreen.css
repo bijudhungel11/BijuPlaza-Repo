@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  height: 100%;
 }
 .cart__list {
   flex: 3 1 60rem;

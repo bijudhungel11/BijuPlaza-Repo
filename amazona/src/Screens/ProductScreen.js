@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./ProductScreen.css";
 import { useSelector, useDispatch } from "react-redux";
 import { detailsProduct } from "../actions/productListAction";
+import { BsFillBackspaceFill } from "react-icons/bs";
 
 function ProductScreen(props) {
   /* props.match.params.id gives the id or the index of those pictures which has been clicked. 
@@ -32,7 +33,9 @@ function ProductScreen(props) {
   return (
     <div>
       <div className="back-to-home">
-        <Link to="/">Back To Home</Link>
+        <Link to="/">
+          <BsFillBackspaceFill /> Back To Home
+        </Link>
       </div>
       {loading ? (
         <div>Loading....</div>
