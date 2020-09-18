@@ -1,7 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
 /* to deploy */
-import path from "path";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import config from "./config.js";
@@ -9,7 +8,7 @@ import userRoute from "./routes/userRoutes.js";
 import productRoute from "./routes/productRoutes.js";
 
 dotenv.config();
-const mongodbUrl = config.MONGODB_URL;
+const mongodbUrl = config.MONGODB_URI;
 mongoose
   .connect(mongodbUrl, {
     useNewUrlParser: true, //no error on the pages
@@ -53,10 +52,10 @@ app.get("/api/products", (req, res) => {
 /* step 3 */
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("amazona/build"));
-  /*  app.use(express.static(path.join(`${__dirname}/../amazona/build`)));
+  const path = require("path");
   app.get("*", (req, res) => {
-    res.sendFile(path.join(`${__dirname}/../amazona/build/index.html`));
-  }); */
+    res.sendFile(path.resolve(__dirname, "amazona", "build", "index.html"));
+  });
 }
 app.listen(config.PORT, () => {
   console.log("Server started at http://localhost:5000");

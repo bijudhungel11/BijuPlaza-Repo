@@ -1,8 +1,8 @@
 export default {
   PORT: process.env.PORT || 5000,
-  MONGODB_URL:
-    process.env.MONGODB_URL ||
-    "mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/testdb",
+  MONGODB_URI:
+    process.env.MONGODB_URI ||
+    "mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/testdb ",
   JWT_SECRET: process.env.JWT_SECRET || "somethingsecret",
 };
 /* mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/test */
@@ -21,3 +21,9 @@ mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass%20Co
 compass 
 mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/testdb
 */
+
+/* best one which is online all data is available 
+
+
+
+mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/testdb*/

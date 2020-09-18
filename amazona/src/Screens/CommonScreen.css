@@ -1,0 +1,42 @@
+.product__screen--topic form {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0rem;
+}
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin-right: 1rem;
+  outline: none;
+  border: 3px solid chartreuse;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.btn__submit {
+  background-color: chartreuse;
+  padding: 7px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  transition: 0.2s;
+}
+.btn__submit:hover {
+  cursor: pointer;
+  background-color: rgb(106, 211, 1);
+}
+
+.btn-addToCart {
+  opacity: 0;
+  transition: opacity 0.1s;
+  font-weight: bolder;
+  padding: 5px;
+  background-color: chartreuse;
+  width: 100%;
+}
+
+.btn-addToCart.active {
+  opacity: 1;
+  transition: background-color 0.2s;
+}
+.btn-addToCart.active:hover {
+  background-color: rgb(113, 223, 2);
+}
