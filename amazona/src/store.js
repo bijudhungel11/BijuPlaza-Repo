@@ -16,7 +16,7 @@ import {
 const cartItems = Cookie.getJSON("cartItems") || [];
 /* : JSON.parse(localStorage.getItem("cartItems") || []), */
 const userInfo = Cookie.getJSON("userInfo") || false;
-
+// this would help in to grab the data from the cookies
 const initialState = {
   cart: {
     cartItems,
