@@ -153,9 +153,11 @@ a:hover {
   height: 50rem;
   border-bottom: 0.1rem #c0c0c0 solid;
   transition: all 0.2s;
+  backface-visibility: hidden;
 }
 .products li:hover {
   transform: scale(1.01);
+  backface-visibility: hidden;
 
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.6);
 }
@@ -315,8 +317,8 @@ a:hover {
 
 .scroll__to--top {
   position: fixed;
-
-  bottom: 5rem;
+  display: none;
+  bottom: 6rem;
   right: 2rem;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.308);

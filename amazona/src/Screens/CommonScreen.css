@@ -40,3 +40,7 @@
 .btn-addToCart.active:hover {
   background-color: rgb(113, 223, 2);
 }
+
+.scroll__to--top.active {
+  display: block;
+}

@@ -15,6 +15,7 @@ function CommonScreen(props) {
   /* to  */
   const [value, setValue] = useState("");
   const [search, setSearch] = useState("");
+  const [showBtnTop, setShowBtnTop] = useState(false);
 
   const handleChange = (e) => {
     setSearch(e.target.value);
@@ -23,6 +24,15 @@ function CommonScreen(props) {
     e.preventDefault();
     e.target.value = "";
   };
+
+  const handleScroll = () => {
+    if (window.scrollY >= 100) {
+      setShowBtnTop(true);
+    } else {
+      setShowBtnTop(false);
+    }
+  };
+  window.addEventListener("scroll", handleScroll);
 
   const mouseEnterHandle = (e, index) => {
     console.log(index);
@@ -98,7 +108,10 @@ function CommonScreen(props) {
           </li>
         ))}
       </ul>
-      <div className="scroll__to--top" onClick={scrollToTop}>
+      <div
+        className={`scroll__to--top ${showBtnTop ? "active" : ""}`}
+        onClick={scrollToTop}
+      >
         <h2>^</h2>
       </div>
     </>

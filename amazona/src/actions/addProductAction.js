@@ -24,6 +24,10 @@ const saveProduct = (product) => async (dispatch, getState) => {
           Authorization: "Bearer" + userInfo.token,
         },
       });
+      console.log(
+        "the value of the data with the token why that was needed====================================================================================>",
+        data
+      );
       dispatch({ type: PRODUCT_SAVE_SUCCESS, payload: data });
     } else {
       // console.log(product._id);

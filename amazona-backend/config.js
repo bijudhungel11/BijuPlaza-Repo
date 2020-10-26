@@ -1,8 +1,9 @@
+/* uoHpR9Q2h8CA5nSa */
 export default {
   PORT: process.env.PORT || 5000,
   MONGODB_URI:
     process.env.MONGODB_URI ||
-    "mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/testdb ",
+    "mongodb+srv://BijuDhungel:uoHpR9Q2h8CA5nSa@cluster0.gctzz.mongodb.net/<dbname>?retryWrites=true&w=majority",
   JWT_SECRET: process.env.JWT_SECRET || "somethingsecret",
 };
 /* mongodb+srv://admin-biju:Biju11@cluster0.okd9z.mongodb.net/test */

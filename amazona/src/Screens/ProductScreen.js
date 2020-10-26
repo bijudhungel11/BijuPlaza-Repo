@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./ProductScreen.css";
 import { useSelector, useDispatch } from "react-redux";
 import { detailsProduct } from "../actions/productListAction";
@@ -19,6 +19,15 @@ function ProductScreen(props) {
   //console.log(typeof parameter);
   const [qty, setQty] = useState(1);
   const productDetails = useSelector((state) => state.productDetails);
+
+  const params = useParams();
+
+  if (props.match.params.id === params.id) {
+    console.log(
+      "Oh my god this is true that means we can use the params.id instad of the props.match.params.id"
+    );
+  }
+  console.log(params);
   const handleToCart = () => {
     props.history.push("/cart/" + props.match.params.id + "?qty=" + qty);
     console.log(props.history);
@@ -28,8 +37,8 @@ function ProductScreen(props) {
   // console.log(product);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(detailsProduct(props.match.params.id));
-  }, [dispatch, props.match.params.id]);
+    dispatch(detailsProduct(params.id));
+  }, [dispatch, params.id]);
   return (
     <div>
       <div className="back-to-home">
